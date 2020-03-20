@@ -1,0 +1,9 @@
+chatBotDictionary={}
+chatBotDictionary["greeting"]=[["Hello","Hi","Morning"],["Hi there","Good day"]]
+chatBotDictionary["farewell"]=[["Good Bye","Bye","See you"],["Good Bye","See you then"]]
+import random
+guestRequirement=input("How can I help you today?")
+for x in chatBotDictionary:
+  for y in chatBotDictionary[x][0]:
+    if guestRequirement==y:
+      print(random.choice(chatBotDictionary[x][1]))
